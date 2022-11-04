@@ -22,7 +22,7 @@ Las licencias son un contrato con la empresa y el uso sobre qué se puede hacer 
     Por último, y bajo unas condiciones que ahora definiremos surgen 6 tipos de licencias CC:  
         - *Attribution:* La obra puede ser explotada pero es obligatorio reconocer al autor.
         - *Non commercial:* El material puede ser distribuido, copiado o exhibido siempre que su uso no sea comercial.  
-        - *No derivate works:* La ovra se puede copiar, distribuir o exhibir pero sin alterar la obra original. Por ejemplo, cogerse una parte de una fotografía.  
+        - *No derivate works:* La obra se puede copiar, distribuir o exhibir pero sin alterar la obra original. Por ejemplo, cogerse una parte de una fotografía.  
         - *Share alike:* Se puede realizar trabajos derivados pero deben tener la misma licencia para ser distribuidos.  
         ![](img/Captura%20de%20pantalla_2022-11-03_16-27-26.png)  
 
@@ -43,7 +43,22 @@ Cuotas: Divisiones de los ficheros para diferentes usos
 
 Uso preferente: Sistemas preferentes que compatibilizan los sistemas de ficheros  
 
-Journaling: Es una especie de diario / checklist para que, en caso de interrumpción de proceso, se pueda borrar y rehacer o continuar en el momento en el que se interrumpió el proceso. 
+Journaling: Es una especie de diario / checklist para que, en caso de interrumpción de proceso, se pueda borrar y rehacer o continuar en el momento en el que se interrumpió el proceso.  
 
+## *Acerca de los discos:*  
 
+Se puede tener un disco exclusivo para un S.O o pueden hacerse particiones para diferenciarlos. Si surge un problema en el que las particiones se muestran como un único disco. (Spanned). Esto es la forma de discos RAID. De esta forma, si se pierde una de las particiones no se pierde la totalidad de los datos. Existen:  
 
+***Raid 0 (Stripe):*** En esta forma, un fichero se divide en dos (al igual que el disco) y uno va a cada partición del disco. De esta forma va a tardar menos en leerse y guardarse. Es decir, la principal ventaja es que se acelera el proceso n veces según los discos/particiones que tenemos. Además, en el tamaño se va a mostrar el total de todos. Si tengo 3 discos de 1TB, se va a mostrar que tengo 3TB. La desventaja es que desde que pierda uno de los n discos, pierdo todo el sistema / todo lo almacenado.  
+
+***Raid 1 (Mirror):*** La escritura se mantiene. La lectura, se acelera porque se puede buscar en n discos. Aquí, tenemos un espacio de 100% // n discos y además, podemos perder n-1 discos. Aunque el rendimiento se reduzca la información queda mucho más protegida que en el anterior.  
+
+***Raid 2***: Permiten recuperar información perdida bit a bit  
+
+***Raid 3 (Paridad):*** Aquí utilizamos el byte para la recuperación de la información perdida. Se completa para tener una paridad en los 0 / 1, buscando la rapidez para hacer los procesos.  
+
+***Raid 4:*** Igual que Raid 3 pero leemos un bloque completo y no byte a byte.  
+
+***Raid 5:*** El disco de redundancia es un disco normal que va almacenando lo que hacia este disco en Raid 4. De esta forma se distribuye la paridad entre todos los discos para que ningune se desgaste en exceso o por encima del resto. En este, la velocidad de escritura se ve afectada ya que se necesita hacer la paridad. Siempre se va a desperdiciar el tamaño de 1 disco.  
+
+***Raid 6:***  En sistemas críticos se utiliza esta opción. En esta se usa 2 discos de redundacia para estar cubierto ante un problema.
