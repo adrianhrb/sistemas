@@ -70,4 +70,8 @@ Boostarp, que viene de hacer algo por si mismo, define la forma en la que el PC 
 1. ***POST:*** Power on self test, comprueba que todo está en orden para arrancar el ordenador (Tiene CPU, RAM...). Si algo falta, cada placa lo mostrará de forma difente (Pitido, luces, parpadeo)  
 2. ***Gestor de arranque:*** En la BIOS decido donde quiero arrancar el ordenador, por ejemplo si lo quisiera hacer desde un pendrive o de qué disco hacerlo.
 3. ***Cargador del sistema:*** Una vez que la BIOS le pasa al cargador del sistema la información, se carga el sistema operativo que se haya indicado o que haya guardado la BIOS. 
-4. ***MBR:*** Existe una parte reservada del disco que guardaba la información necesaria en la que la BIOS va a buscar. Esa reserva era de 512b. El Master Boot Record por tanto es un esquema de particionado de dispositivos de almacenamiento, denominado sector 0, donde toda la información que la BIOS necesita está guardada. 
+4. ***MBR:*** Existe una parte reservada del disco que guardaba la información necesaria en la que la BIOS va a buscar. Esa reserva era de 512b. El Master Boot Record por tanto es un esquema de particionado de dispositivos de almacenamiento, denominado sector 0, donde toda la información que la BIOS necesita está guardada.  
+
+## *Virtualización:*
+
+La virtualización (v12n, esta es una forma de abreviar palabras largas para no cometer errores al nombrarlas) permite
