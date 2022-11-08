@@ -47,7 +47,7 @@ Journaling: Es una especie de diario / checklist para que, en caso de interrumpc
 
 ## *Acerca de los discos:*  
 
-Se puede tener un disco exclusivo para un S.O o pueden hacerse particiones para diferenciarlos. Si surge un problema en el que las particiones se muestran como un único disco. (Spanned). Esto es la forma de discos RAID. De esta forma, si se pierde una de las particiones no se pierde la totalidad de los datos. Existen:  
+Se puede tener un disco exclusivo para un S.O o pueden hacerse particiones para diferenciarlos. Si surge un problema en el que las particiones se muestran como un único disco. (Spanned). Esto es la forma de discos RAID (Grupo de discos de redundancia independientes). De esta forma, si se pierde una de las particiones no se pierde la totalidad de los datos. Existen:  
 
 ***Raid 0 (Stripe):*** En esta forma, un fichero se divide en dos (al igual que el disco) y uno va a cada partición del disco. De esta forma va a tardar menos en leerse y guardarse. Es decir, la principal ventaja es que se acelera el proceso n veces según los discos/particiones que tenemos. Además, en el tamaño se va a mostrar el total de todos. Si tengo 3 discos de 1TB, se va a mostrar que tengo 3TB. La desventaja es que desde que pierda uno de los n discos, pierdo todo el sistema / todo lo almacenado.  
 
@@ -61,4 +61,13 @@ Se puede tener un disco exclusivo para un S.O o pueden hacerse particiones para 
 
 ***Raid 5:*** El disco de redundancia es un disco normal que va almacenando lo que hacia este disco en Raid 4. De esta forma se distribuye la paridad entre todos los discos para que ningune se desgaste en exceso o por encima del resto. En este, la velocidad de escritura se ve afectada ya que se necesita hacer la paridad. Siempre se va a desperdiciar el tamaño de 1 disco.  
 
-***Raid 6:***  En sistemas críticos se utiliza esta opción. En esta se usa 2 discos de redundacia para estar cubierto ante un problema.
+***Raid 6:***  En sistemas críticos se utiliza esta opción. En esta se usa 2 discos de redundacia para estar cubierto ante un problema.  
+
+## *Sistema de arranque:*
+
+Boostarp, que viene de hacer algo por si mismo, define la forma en la que el PC se enciende por sí mismo solo con darle a un botón. La BIOS (Sistema básico de entrada y salida)es un chip físico que funciona a 16 bits y con 1mb máximo de memoria. Antiguamente, la BIOS era ROM, estaba definida por el fabricante y no se podía modificar. La BIOS va a hacer:  
+
+1. ***POST:*** Power on self test, comprueba que todo está en orden para arrancar el ordenador (Tiene CPU, RAM...). Si algo falta, cada placa lo mostrará de forma difente (Pitido, luces, parpadeo)  
+2. ***Gestor de arranque:*** En la BIOS decido donde quiero arrancar el ordenador, por ejemplo si lo quisiera hacer desde un pendrive o de qué disco hacerlo.
+3. ***Cargador del sistema:*** Una vez que la BIOS le pasa al cargador del sistema la información, se carga el sistema operativo que se haya indicado o que haya guardado la BIOS. 
+4. ***MBR:*** Existe una parte reservada del disco que guardaba la información necesaria en la que la BIOS va a buscar. Esa reserva era de 512b. El Master Boot Record por tanto es un esquema de particionado de dispositivos de almacenamiento, denominado sector 0, donde toda la información que la BIOS necesita está guardada. 
