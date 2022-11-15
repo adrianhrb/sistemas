@@ -1,6 +1,4 @@
 # Apuntes 
-
-Apuntes:
 [Apuntes](Apuntes/Readme.md)
 
 # Tareas
