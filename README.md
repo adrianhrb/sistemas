@@ -6,5 +6,6 @@
 -------
 ## Contenidos:
 
-[Contenido](Clase/Readme.md)
+[Apuntes](Apuntes/Readme.md)  
+[Tareas](Tareas/Readme.md)
 
