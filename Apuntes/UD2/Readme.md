@@ -37,3 +37,11 @@ Comandos básicos:
 - ```cat``` Permite acceder al contenido de un fichero
 - ```more or less + fichero``` Si es demasiado contenido, permite mostrarlo a cachos o de forma continua
 - ```dev null``` Es una especie de papelera, todo lo copiado o que se mueva allí irá a la "basura"
+- ```grep a ejemplo``` Busca la letra A en el fichero que le indicamos
+- ```grep -v run salida.txt``` En este caso muestra todo lo que NO tenga run 
+- ```grep -v run salida.txt | grep snap``` Aquí, muestra todo lo que NO tenga run pero SI tiene snap
+- ```grep -i``` Para case sensitive
+- ```|``` Usamos las barras para concadenar comandos, es decir hacemos una cosa, a la salida le aplicamos otra cosa y así sucesivamente
+- ```grep ^t ejemplo.txt``` Lo que hace el sombrerito de delante es mostrar lo que empueza por T en el fichero indicado  
+- - ```grep ^t x$ ejemplo.txt``` La $ detras indica que termine por lo indicado
+
