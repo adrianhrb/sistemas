@@ -9,7 +9,7 @@ Una de las diferencias entre Linux y Windows es que es case sensitive, es decir 
 
 Las operaciones básicas son las CRUD: Crear, leer (read), actualizar (update) y borrar (delete)
 
-Comandos básicos:  
+**Comandos básicos:**
 
 - ```mkdir``` Crear carpeta/directorio 
 - ```man mkdir``` // ```mkdir --help``` El comando man nos da la ayuda de cada comando. Podemos ir acumulando la creación de directorios, pero para ello el primer debe estar siempre el primero creado. Para solucionar eso, ponemos -p antes de los directorios y así funcionaría.
@@ -43,5 +43,25 @@ Comandos básicos:
 - ```grep -i``` Para case sensitive
 - ```|``` Usamos las barras para concadenar comandos, es decir hacemos una cosa, a la salida le aplicamos otra cosa y así sucesivamente
 - ```grep ^t ejemplo.txt``` Lo que hace el sombrerito de delante es mostrar lo que empueza por T en el fichero indicado  
-- - ```grep ^t x$ ejemplo.txt``` La $ detras indica que termine por lo indicado
+- ```grep ^t x$ ejemplo.txt``` La $ detras indica que termine por lo indicado
+
+## ***Comando gestión Windows:***
+Windows es INsensitive, es decir que no distingue entre mayúscula y minúscula. Otras diferencias es que la barra separadora de directorios es la barra invertida \
+**Comandos básicos:**
+- ```mkdir o md``` El uso de MD es para acortar, misma función
+- ```rmdir o rd```
+- ```cd o chdir```
+- ```dir``` Para ver los directorios
+- ```move``` Para mover cosas como ficheros o directorios
+- ```ren o rename``` Para renombrar cosas
+- ```cls``` Para limpiar la pantalla, clear screen
+- ```help comando o comando|?``` Al final de algo para ayuda de comando
+- ```Echo > fichero``` Para crear un fichero
+- ```cd (vacío)``` Nos dice la ruta en la que estamos trabajando
+- ```copy``` Comando para copiar cosas 
+- ```xcopy /s``` Para copiar directorios (subdirectorios) pero que tengan contenido
+- ```xcopy /e``` Para copiar directorios aunque estén vacíos
+- ```del o erase``` Para borrar ficheros
+- ``` ```
+- ``` ```
 
