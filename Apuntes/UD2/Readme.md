@@ -7,7 +7,9 @@ Además, los comandos nos permiten automatizar las cosas que requiramos. Por eje
 
 Una de las diferencias entre Linux y Windows es que es case sensitive, es decir que linux distingue entre mayúsculas y minúsculas. En linux, si el comando va bien no se muestra nada, si hay un error se va a mostrar
 
-Las operaciones básicas son las CRUD: Crear, leer (read), actualizar (update) y borrar (delete)
+Las operaciones básicas son las CRUD: Crear, leer (read), actualizar (update) y borrar (delete)  
+
+Dentro de Linux debemos saber cosas como: / todo el disco, ~ mi usuario, . donde estoy situado...
 
 **Comandos básicos:**
 
@@ -44,6 +46,25 @@ Las operaciones básicas son las CRUD: Crear, leer (read), actualizar (update) y
 - ```|``` Usamos las barras para concadenar comandos, es decir hacemos una cosa, a la salida le aplicamos otra cosa y así sucesivamente
 - ```grep ^t ejemplo.txt``` Lo que hace el sombrerito de delante es mostrar lo que empueza por T en el fichero indicado  
 - ```grep ^t x$ ejemplo.txt``` La $ detras indica que termine por lo indicado
+- ```ls -l /``` Con este comando veremos enlaces, de ahí viene el lm. Es decir, para ver contenido dentro de --> podemos ir directamente al origen. Sirve para, por ejemplo, poner un fichero en dos lugares y modificarlos y que esas modificaciones cambien en ambos lugares
+- ```ln -s``` Creamos un enlace para entrar con facilidad a ciertos ficheros o directorios
+- ```find``` Nos permite encontrar ficheros, directorios y cualquier cosa que queramos
+- ```Comodín *``` Cualquier número de letras
+- ```Comodín ? ``` Busca nombre de dos letras donde la primera es la que indiquemos
+- ```find / -name "*.txt" ``` Este comando busca cualquier archivo txt en todo el disco duro
+- ```wc``` Es para contar cuánto hay de algo. Nos devuelve 3 números, líneas, caracteres 
+- ```find / -type d/f/l ``` Nos busca ficheros, directorios y enlaces
+- ``` ```
+- ```find / -atime +30 ``` Los ficheros que han sido accedidos en x tiempo. Con time es días. Con min, minutos. Además podemos pedir atime(acceso) mtime(modificado) y ctime(cambios). 
+- ```find / -name / -iname ``` Busca por nombre y además, si añadimos la i es insesnsitive
+- ```find / -size ``` Por tamaño 
+- ```find / -empty ``` Busca todo lo vacío
+- ``` find /tmp -type... -exec rm {} \;``` Con esto indicamos que borre todo lo encontrado en lo que hayamos puesto
+- ```head ...``` Muestra las primeras 10 lineas
+- ```tail -n 5 ...``` Muestra las últimas 5 lineas
+- ```head -n -1``` Si ponemos un -1, nos quitará la primera linea
+- ```cut -d "," -f 1``` Corta por columnas por ejemplo una base de datos
+- ```grep ^Will$``` Que empiece por WIll y el $ indica que no tenga nada más
 
 ## ***Comando gestión Windows:***
 Windows es INsensitive, es decir que no distingue entre mayúscula y minúscula. Otras diferencias es que la barra separadora de directorios es la barra invertida \
