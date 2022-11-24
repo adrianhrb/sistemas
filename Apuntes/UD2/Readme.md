@@ -50,7 +50,7 @@ Dentro de Linux debemos saber cosas como: / todo el disco, ~ mi usuario, . donde
 - ```ln -s``` Creamos un enlace para entrar con facilidad a ciertos ficheros o directorios
 - ```find``` Nos permite encontrar ficheros, directorios y cualquier cosa que queramos
 - ```Comodín *``` Cualquier número de letras
-- ```Comodín ? ``` Busca nombre de dos letras donde la primera es la que indiquemos
+- ```Comodín ? ``` Busca nombre de dos letras donde la primera es la que indiquemos. Los comodines son solo para ficheros
 - ```find / -name "*.txt" ``` Este comando busca cualquier archivo txt en todo el disco duro
 - ```wc``` Es para contar cuánto hay de algo. Nos devuelve 3 números, líneas, caracteres 
 - ```find / -type d/f/l ``` Nos busca ficheros, directorios y enlaces
@@ -65,6 +65,13 @@ Dentro de Linux debemos saber cosas como: / todo el disco, ~ mi usuario, . donde
 - ```head -n -1``` Si ponemos un -1, nos quitará la primera linea
 - ```cut -d "," -f 1``` Corta por columnas por ejemplo una base de datos
 - ```grep ^Will$``` Que empiece por WIll y el $ indica que no tenga nada más
+- ```[abc]``` Para buscar una a, una b o una c
+- ```grep ^...,...``` Si ponemos los puntos indica caracteres
+- ```grep ^S.*n$``` Si indicamos esto decimos: Que empiece por S, el . indica cualquier caracter, el * las veces que sea y el n$ que termine en eso
+- ```sort | uniq - c ``` AL indicar el -c nos cuenta los repetidos, el sort ordena todo. Luego si hacemos uniq -n nos sale esa cuenta
+- ```tr "%" "&"``` EL tr nos permite cambiar caraeteres por otro que indiquemos
+- ```tr -d ``` Con el -d borramos lo que indiquemos y que esté repetida
+- ```date -d ``` Buscamos la fecha que querramos
 
 ## ***Comando gestión Windows:***
 Windows es INsensitive, es decir que no distingue entre mayúscula y minúscula. Otras diferencias es que la barra separadora de directorios es la barra invertida \
