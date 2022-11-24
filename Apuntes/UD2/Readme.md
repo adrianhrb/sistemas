@@ -1,5 +1,8 @@
 # ADMINISTRACIÓN LOCAL DE SISTEMAS  
 
+## Sistema operativo:
+Es el software que se situa entre las aplicaciones y el hardware para controlar el uso que las aplicaciones hacen del mismo. Para ello aparece el kernel, que es el núcleo del sistema operativo. Este arranca a la vez que el ordenador y se mantiene en memoria realizando funciones básicas. 
+
 ## ***Comandos gestión de linux:***  
 El uso de los comandos es importante para la gestión de los servidores, los cuales no tienen interfaz gráfica y necesitamos de los comandos para gestionarlo. Es decir, es de acceso remoto.  
 
