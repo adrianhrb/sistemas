@@ -93,6 +93,6 @@ Windows es INsensitive, es decir que no distingue entre mayúscula y minúscula.
 - ```xcopy /s``` Para copiar directorios (subdirectorios) pero que tengan contenido
 - ```xcopy /e``` Para copiar directorios aunque estén vacíos
 - ```del o erase``` Para borrar ficheros
-- ``` ```
+- ```find /v "" /c ``` Es un contador pero en la terminal de Windows
 - ``` ```
 
