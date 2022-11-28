@@ -68,7 +68,12 @@ Se puede tener un disco exclusivo para un S.O o pueden hacerse particiones para 
 
 ***Raid 6:***  En sistemas críticos se utiliza esta opción. En esta se usa 2 discos de redundacia para estar cubierto ante un problema.  
 
-## *Sistema de arranque:*
+## *Gestor de arranque:*  
+
+EL gestor de arranque es el programa encargado de tomar el control de la máquina justo después de conectarse y de haber terminado las verificaciones de software.  
+
+- Registro de arranque maestro (MBR):  
+Se llama MBR a un esquema de particionado de dispositivos 
 
 Boostarp, que viene de hacer algo por si mismo, define la forma en la que el PC se enciende por sí mismo solo con darle a un botón. La BIOS (Sistema básico de entrada y salida)es un chip físico que funciona a 16 bits y con 1mb máximo de memoria. Antiguamente, la BIOS era ROM, estaba definida por el fabricante y no se podía modificar. La BIOS va a hacer:  
 
