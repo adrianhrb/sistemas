@@ -99,4 +99,48 @@ Supera las limitaciones de BIOS. UEFI define una nueva interfaz entre los sistem
 
 ## *Virtualización:*
 
-La virtualización (v12n, esta es una forma de abreviar palabras largas para no cometer errores al nombrarlas) permite
+La virtualización (v12n, esta es una forma de abreviar palabras largas para no cometer errores al nombrarlas) permite crear una versión virtual de algún recurso tecmológico. Hay un hipervisor que crea una capa de abstracción entre el hardware de la máquina física y el sistema operativo de la máquina virtual. Este hipervisor maneja, gestiona y arbitra los 4 recursos principales de un ordenador (CPU, Memoria, Periféricos y Conexiones de Red), de esa forma reparte los recursos entre las máquinas virtuales.
+
+### *Hipervisores:*  
+Fueron creados a finales de los 60. Hay dos tipos de hipervisores:
+- Tipo 1: Denominado nativo, es el software que se ejecuta directamente sobre el hardware.  
+- Tipo 2: Denominado hosted, es el que se ejecuta sobre un sistema operativo, que actua como anfitrión.  
+
+### *Máquina virtual:*  
+Una máquina virtual es un software que simula un sistema de
+computación y puede ejecutar programas como si fuese una computadora real. Una característica esencial de las máquinas virtuales es que los procesos que ejecutan
+están limitados por los recursos y abstracciones proporcionados por ellas. Estos procesos no pueden escaparse de esta "computadora virtual".
+
+### *Contenedores de software:*  
+Son un entorno ligero y portable que permite ejecutar aplicaiones en cualquier otro equipo, independientemente de su sietma operativo, aplicaciones... Es similar a una máquina virtual, pero mucho más ligera (no necesita S.O) ya que solo cuenta con recuros mínimos para ser ejecutada en otras máquinas.  
+
+### *XaaS: Servicios y computación en la nube*  
+A la hora de lanzar una aplicación hay varias opciones. La primera de ellas es gestionar nuestro propio servidor web (es comoplejo y hardware costoso además de tener que configurar e instalar todo). 
+
+La computación en la nube abre un abanico de alternativas si queremos externalizar los servidores web a otras empresas en forma de servicios. De esta forma, ponemos en manos de empresas especializadas el uso de sus recursos de software y hardware para usarlos como servidor web donde correrá nuestra aplicación. Tenemos las siguientes opciones:
+
+- IaaS (Infraestructura como servicio): En esta modalidad obtenemos un servidor virtualizado como si hubiéramos adquirido una máquina física. Tenemos acceso a un servidor sin tener que preocuparnos de climatización, alimentación, almacenamiento, acceso a la red... pero nos debemos encargar de la instalación de un S.O, software que necesiten nuestras aplicaciones, gestor de base de datos...  
+
+- PaaS (Plataforma como un servicio): Con esta opción, tenemos un servidor listo para instalar nuestra aplicación (gestión de software y hardware es hecha por terceros). Reducimos la flexibilidad a cambio de ahorrarnos trabajo en mantenimiento y gestión.  
+
+- SaaS (Software como un Servicio): Esta es una alternativa de alto nivel, ya que recibimos un servidor en la nube con todo el software ya instalado y nuestro papel solo se va a centrar en la gestión y uso de ese software, sin preocuparnos de capas inferiores. Es decir, tenemos hasta la aplicación instalada y solo tenemos que darle uso a la misma. 
+
+### *VPS (Servidor virtual Privado)*  
+
+Un servidor virtual privado (VPS, del inglés virtual private server) es un método de
+particionar un servidor físico en varios servidores virtuales (máquinas virtuales con tareas
+de servidor) de tal forma que todo funcione como si se estuviese ejecutando en una única
+máquina. Cada servidor virtual es capaz de funcionar bajo su propio sistema operativo y
+además cada servidor puede ser reiniciado de forma independiente.
+La práctica de particionar un único servidor físico para que funcione como varios
+servidores virtuales ya comenzó con los mainframes y ha vuelto a resurgir con el 
+desarrollo de la virtualización y las tecnologías para otras arquitecturas.
+Al funcionar un VPS con su propia copia del sistema operativo, los clientes tienen nivel de
+acceso root o de superusuario y por tanto, pueden instalar cualquier tipo de software que
+pueda ser ejecutado bajo este sistema operativo. Algunos programas no ejecutan bien en
+entornos virtuales, incluyendo firewalls, clientes antivirus e incluso otras herramientas
+virtuales; algunos VPS proveen fuertes restricciones, pero generalmente son laxas
+comparadas con las que existen en los servidores de almacenamiento compartido. Debido
+a que varios clientes (virtuales) pueden trabajar sobre una sola máquina, un VPS
+normalmente tiene ciertas limitaciones en cuanto al tiempo de procesamiento, RAM y
+espacio en el disco
