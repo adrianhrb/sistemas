@@ -68,9 +68,29 @@ Se puede tener un disco exclusivo para un S.O o pueden hacerse particiones para 
 
 ***Raid 6:***  En sistemas críticos se utiliza esta opción. En esta se usa 2 discos de redundacia para estar cubierto ante un problema.  
 
-## *Sistema de arranque:*
+## *Gestor de arranque:*  
 
-Boostarp, que viene de hacer algo por si mismo, define la forma en la que el PC se enciende por sí mismo solo con darle a un botón. La BIOS (Sistema básico de entrada y salida)es un chip físico que funciona a 16 bits y con 1mb máximo de memoria. Antiguamente, la BIOS era ROM, estaba definida por el fabricante y no se podía modificar. La BIOS va a hacer:  
+EL gestor de arranque es el programa encargado de tomar el control de la máquina justo después de conectarse y de haber terminado las verificaciones de software.  
+
+- Registro de arranque maestro (MBR):  
+Se llama MBR a un esquema de particionado de dispositivos de almacenamiento diseñado para permitir arrancar un sistema residente en el volumen. ESte esquema define un regitro de 512 bytes, que reside en el sector 0 del volumen. 
+
+- Tabla de particiones guid (GPT):  
+Es el particionado definido en el estándar UEFI. Utiliza números pseudoaleatorios para identificar las particiones. Cuando un dispositivo se particiones en GPT se escribe en el sector 0 un registro "MBR protector" cuyo propósito es mantener la compatibilidad con sistemas BIOS. La GPT empieza en el sector 1. GPT proporciona redundancia manteniendo una GPT secundaria al final del disco.  
+
+- Gestor de arranque y cargadores del sistema:  
+Gestor de arranque (boot manager) y cargador de sistema (boot loader). Un cargador de sistema es un programa sencillo diseñado para cargar en memoria un sistema operativo, mientras que un gestor de arranque es un programa que nos permite operaciones previas a la carga del sistema, permitiendo por ejemplo el arranque desde otros dispositivos.  
+
+- BIOS:  
+Basic Input/Ouput System es un firmware para arquitectura x86, está diseñado para ser el primer código que se cargue en memoria al encender el equipo y sus funciones son establecer una interfaz de acceso a los dispositivos del sistema junto a configurar e inicializar los mismos además de iniciar la carga del sistema operativo. Ha quedado obsoltea.  
+
+La primera función de la BIOS es identificar, configurar, comprobar e inicializar los dispositivos del sistema(tarjetas de video, teclado, memoria...). Esta rutina se conoce como POST. Al abar, la BIOS "busca" un código de arranque y le cede el control.  
+
+- Interfaz UEFI:  
+Supera las limitaciones de BIOS. UEFI define una nueva interfaz entre los sistemas operativos y los firmware de los dispositivos de la máquina que sustituye a la BIOS. Se basa en tablas de datos que contienen información de la máquina y por otra parte en rutinas de acceso para los gestores de arranque y el sistema operativo. Estos servicios de arranque. Estos servicios proporcionan un panel de control en modo interfaz gráfica. Las ventajas de la UEFI es que nos permite gestionar el esquema GPT y sistema de archivos FAT. 
+
+
+
 
 1. ***POST:*** Power on self test, comprueba que todo está en orden para arrancar el ordenador (Tiene CPU, RAM...). Si algo falta, cada placa lo mostrará de forma difente (Pitido, luces, parpadeo)  
 2. ***Gestor de arranque:*** En la BIOS decido donde quiero arrancar el ordenador, por ejemplo si lo quisiera hacer desde un pendrive o de qué disco hacerlo.
